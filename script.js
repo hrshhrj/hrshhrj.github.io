@@ -92,14 +92,28 @@ function submitForm(e) {
   btn.textContent = 'Sending…';
   btn.disabled = true;
 
-  setTimeout(() => {
+  fetch('https://formspree.io/f/xpqbanaq', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ name, email, message })
+  })
+  .then(res => {
     btn.textContent = 'Send Message';
     btn.disabled = false;
-    document.getElementById('f-name').value  = '';
-    document.getElementById('f-email').value = '';
-    document.getElementById('f-msg').value   = '';
-    showMsg("Message sent! I'll get back to you soon.", 'ok');
-  }, 1200);
+    if (res.ok) {
+      document.getElementById('f-name').value  = '';
+      document.getElementById('f-email').value = '';
+      document.getElementById('f-msg').value   = '';
+      showMsg("Message sent! I'll get back to you soon.", 'ok');
+    } else {
+      showMsg('Something went wrong. Try emailing me directly.', 'err');
+    }
+  })
+  .catch(() => {
+    btn.textContent = 'Send Message';
+    btn.disabled = false;
+    showMsg('Something went wrong. Try emailing me directly.', 'err');
+  });
 
   function showMsg(text, type) {
     msg.textContent = text;
