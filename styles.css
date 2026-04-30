@@ -1,6 +1,4 @@
-/* ═══════════════════════════════════════════
-   TOKENS — Dark Slate + Amber + Warm White
-═══════════════════════════════════════════ */
+
 :root {
   /* Dark base */
   --ink:       #0F0F13;
@@ -42,7 +40,7 @@
   --mono:  'JetBrains Mono', monospace;
 }
 
-/* ═══════════════════ RESET ═══════════════════ */
+/*RESET*/
 *, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
 html { scroll-behavior:smooth; font-size:16px; }
 body {
@@ -61,7 +59,7 @@ body::after {
   opacity:0.7;
 }
 
-/* ═══════════════════ NAV ═══════════════════ */
+/*NAV*/
 nav {
   position:fixed; top:0; left:0; right:0; z-index:500;
   display:flex; justify-content:space-between; align-items:center;
@@ -103,7 +101,7 @@ nav.scrolled {
 .nav-links a:hover, .nav-links a.active { color:var(--amber); }
 .nav-links a:hover::after, .nav-links a.active::after { transform:scaleX(1); }
 
-/* ═══════════════════ HERO ═══════════════════ */
+/*HERO*/
 #hero {
   min-height: 100vh;
   display:flex; align-items:center;
@@ -223,7 +221,7 @@ nav.scrolled {
 }
 @keyframes drop { 0%,100%{opacity:0.3} 50%{opacity:1} }
 
-/* ═══════════════════ SECTION WRAPPER ═══════════════════ */
+/*SECTION WRAPPER*/
 .section {
   max-width:1040px;
   margin:0 auto;
@@ -261,7 +259,7 @@ nav.scrolled {
   margin:0;
 }
 
-/* ═══════════════════ ABOUT ═══════════════════ */
+/*ABOUT*/
 .about-grid { display:grid; grid-template-columns:3fr 2fr; gap:4rem; align-items:start; }
 .about-text p {
   font-size:0.97rem;
@@ -319,7 +317,7 @@ nav.scrolled {
 .info-v.accent { color:var(--amber); font-weight:500; }
 .info-v.blue { color:var(--teal); font-weight:500; }
 
-/* ═══════════════════ SKILLS ═══════════════════ */
+/*SKILLS*/
 .skills-grid { display:grid; grid-template-columns:repeat(2,1fr); gap:1.5rem; }
 .skill-card {
   background:var(--surface);
@@ -368,7 +366,7 @@ nav.scrolled {
   color:var(--amber); font-weight:400;
 }
 
-/* ═══════════════════ PROJECTS ═══════════════════ */
+/*PROJECTS*/
 .proj-category-label {
   margin-bottom:1.2rem;
 }
@@ -534,7 +532,7 @@ nav.scrolled {
   padding-left:0.75rem;
 }
 
-/* ═══════════════════ RESUME ═══════════════════ */
+/*RESUME*/
 .resume-toolbar { margin-bottom:2rem; display:flex; gap:1rem; }
 
 .resume-wrap {
@@ -616,10 +614,10 @@ nav.scrolled {
 .r-skill-label { font-weight:500; color:var(--ink-hi); min-width:100px; }
 
 @media print {
-  /* ── Page setup ── */
+  /*Page setup*/
   @page { margin: 1.2cm 1.5cm; }
 
-  /* ── Hide everything except the resume ── */
+  /* Hide everything except the resume */
   nav, .resume-toolbar, #hero,
   #about, #skills, #projects,
   .blog-section, .contact-section,
@@ -630,7 +628,7 @@ nav.scrolled {
   body::after,
   .resume-wrap::before { display:none !important; }
 
-  /* ── Reset backgrounds & colors ── */
+  /*Reset backgrounds & colors*/
   html, body {
     background: white !important;
     color: black !important;
@@ -656,7 +654,7 @@ nav.scrolled {
     background: white !important;
   }
 
-  /* ── Typography ── */
+  /*Typography*/
   .r-name { color: black !important; font-size: 2rem !important; }
   .r-title { color: #444 !important; }
   .r-section-title { color: black !important; border-bottom-color: #bbb !important; }
@@ -674,7 +672,7 @@ nav.scrolled {
   .r-section { page-break-inside: avoid; break-inside: avoid; }
 }
 
-/* ═══════════════════ BLOG ═══════════════════ */
+/*BLOG*/
 .blog-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:1.5rem; }
 .blog-card {
   background:var(--surface);
@@ -718,7 +716,7 @@ nav.scrolled {
   margin-top:0.6rem; letter-spacing:0.1em;
 }
 
-/* ═══════════════════ CONTACT ═══════════════════ */
+/* CONTACT */
 .contact-grid { display:grid; grid-template-columns:1fr 1.2fr; gap:4rem; align-items:start; }
 .contact-blurb {
   font-family:var(--serif);
@@ -816,7 +814,7 @@ nav.scrolled {
 .form-msg.ok { background:rgba(74,171,176,0.1); color:var(--teal); border:1px solid rgba(74,171,176,0.2); }
 .form-msg.err { background:rgba(212,98,122,0.08); color:var(--rose); border:1px solid rgba(212,98,122,0.2); }
 
-/* ═══════════════════ FOOTER ═══════════════════ */
+/* FOOTER */
 footer {
   border-top:1px solid var(--border);
   padding:2rem 5vw;
@@ -827,14 +825,14 @@ footer {
 .footer-mono { font-family:var(--mono); font-size:0.66rem; letter-spacing:0.08em; }
 .footer-mono a { color:var(--amber); text-decoration:none; }
 
-/* ═══════════════════ REVEAL ═══════════════════ */
+/* REVEAL */
 .reveal { opacity:0; transform:translateY(20px); transition:opacity 0.6s ease, transform 0.6s ease; }
 .reveal.in { opacity:1; transform:none; }
 .d1 { transition-delay:0.1s; }
 .d2 { transition-delay:0.2s; }
 .d3 { transition-delay:0.3s; }
 
-/* ═══════════════════ RESPONSIVE ═══════════════════ */
+/* RESPONSIVE */
 @media(max-width:860px){
   .nav-links { gap:1.2rem; }
   .about-grid { grid-template-columns:1fr; gap:2rem; }
