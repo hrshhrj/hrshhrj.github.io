@@ -754,6 +754,10 @@ nav.scrolled {
   overflow:hidden;
   box-shadow:var(--shadow-deep);
   transition:transform 0.25s, border-color 0.25s;
+  text-decoration: none;
+  display: block;
+  color: inherit;
+  cursor: pointer;
 }
 .blog-card:hover { transform:translateY(-4px); border-color:var(--border-md); }
 .blog-thumb {
