@@ -759,6 +759,7 @@ nav.scrolled {
   color: inherit;
   cursor: pointer;
 }
+.blog-card * { text-decoration: none; }
 .blog-card:hover { transform:translateY(-4px); border-color:var(--border-md); }
 .blog-thumb {
   height:140px;
