@@ -406,7 +406,7 @@
               </div>
               <div class="proj-summary-item">
                 <span class="psi-label">What I Built</span>
-                <span class="psi-text">A 5-LED scanner using an NE555 timer (clock) and CD4017 decade counter (step sequencer), with 6 diodes acting as OR gates to create the back-and-forth bounce — all for under ₹200.</span>
+                <span class="psi-text">A 5-LED scanner using an NE555 timer in astable mode as the clock and a CD4017 decade counter as the step sequencer. Six 1N4148 diodes wired as OR gates allow LEDs 2, 3 and 4 to fire on both the forward and return sweep — creating the bounce without any programming.</span>
               </div>
               <div class="proj-summary-item">
                 <span class="psi-label">Result</span>
@@ -450,7 +450,7 @@
             <div class="proj-summary-grid">
               <div class="proj-summary-item">
                 <span class="psi-label">Problem</span>
-                <span class="psi-text">Underground pipe leaks waste 30–40% of India's treated water. Professional detectors cost ₹50,000+, making them inaccessible to small utilities and homeowners.</span>
+                <span class="psi-text">Underground pipe leaks waste 30–40% of India's treated water. The leaks are invisible, existing detection methods are expensive, and no affordable solution guides you to the exact leak location.</span>
               </div>
               <div class="proj-summary-item">
                 <span class="psi-label">What I Built</span>
@@ -458,7 +458,7 @@
               </div>
               <div class="proj-summary-item">
                 <span class="psi-label">Result</span>
-                <span class="psi-text">Zero false alarms in testing. Confirmed leaks every time. Total build cost under ₹1,500 — 97% cheaper than professional equipment. Guided leak location via buzzer volume worked reliably.</span>
+                <span class="psi-text">Zero false alarms in testing. Leak confirmed correctly every time during continuous vibration. Buzzer volume guided accurately to the strongest vibration point. Auto-calibration adjusted correctly across different environments in 3 seconds.</span>
               </div>
             </div>
             <div class="proj-footer-row">
@@ -532,7 +532,7 @@
             </div>
             <div class="r-entry-sub">Embedded Systems · Arduino · ADXL345 · I2C · SW-420</div>
             <ul>
-              <li>Built an underground pipe leak detector for under ₹1,500 — 97% cheaper than professional equipment</li>
+              <li>Built an Arduino-based underground pipe leak detector using vibration sensors and an accelerometer</li>
               <li>Two SW-420 sensors + ADXL345 accelerometer with 1-second rolling average to eliminate sensor noise</li>
               <li>2-second confirmation timer filters false alarms from vehicles and footsteps</li>
               <li>PWM buzzer volume increases as you approach the leak for precise location guidance</li>
